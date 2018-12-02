@@ -1,0 +1,115 @@
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+/* Navigation styling */
+.nav {
+	position:fixed;
+	display:inline-block;
+	font-size:14px;
+	font-weight:900;
+}
+.nav-list {
+	
+}
+.nav-item {
+	float:middle;
+	*display:inline;
+	zoom:1;
+}
+.nav-item a {
+	display:inline-block;
+	padding: none;
+    font-size: 1em;
+    font-weight: 300;
+	color:#000;
+	bacground: none;
+	text-decoration: none;
+}
+.nav-item:first-child a {
+	border-radius:5px 0 0 5px;
+}
+.nav-item:last-child a {
+	border-radius:0 5px 5px 0;
+}
+.nav-item a:hover {
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+    margin-top: 1em;
+    margin-bottom: -10px;
+}
+
+
+/* Mobile Navigation */
+.nav-mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+	background:#34495E url(../img/nav.svg) no-repeat center center;
+	height:40px;
+	width:cover;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: black;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  clear: both;
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+	.nav-mobile {
+		display:block;
+	}
+	.nav {
+		width:100%;
+		padding:0px 0 0;
+	}
+	.nav-list {
+		display:none;
+	}
+	.nav-item {
+		width:100%;
+		float:none;
+	}
+	.nav-item a {
+		background:none;
+		padding:none;
+	}
+	.nav-item:first-child a {
+		border-radius:5px 0 0;
+	}
+	.nav-item:last-child a {
+		border-radius:0 0 5px 5px;
+	}
+	.nav-active {
+		display:block;
+	}
+	.nav-mobile-open {
+		border-radius:5px 5px 0 0;
+		-webkit-border-radius:5px 5px 0 0;
+		-moz-border-radius:5px 5px 0 0;
+	}
+}
